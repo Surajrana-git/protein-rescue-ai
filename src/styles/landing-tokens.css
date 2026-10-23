@@ -1,0 +1,37 @@
+/* ===== Landing Page Design Tokens ===== */
+/* These override/extend global tokens specifically for the landing page. */
+
+:root {
+  /* Brand palette (sampled from reference) */
+  --lp-royal-blue:     #1636B7;
+  --lp-dark-navy:      #0B1A6B;
+  --lp-lavender:       #D6DCF5;
+  --lp-lavender-light: #E8ECF9;
+  --lp-yellow:         #FFD84D;
+  --lp-cyan:           #4DD0F0;
+  --lp-near-black:     #111827;
+  --lp-white:          #ffffff;
+  --lp-text-muted:     #6B7280;
+
+  /* Backgrounds & borders for subpages */
+  --lp-page-bg:        #f5f9fd;
+  --lp-hero-help-bg:   #edf3fc;
+  --lp-card-border:    rgba(22, 54, 183, 0.08);
+
+  /* Shadows */
+  --lp-shadow-sm:  0 2px 8px rgba(0,0,0,.07);
+  --lp-shadow-md:  0 4px 16px rgba(0,0,0,.10);
+  --lp-shadow-lg:  0 8px 24px rgba(0,0,0,.12);
+
+  /* Radii */
+  --lp-radius:     16px;
+  --lp-radius-sm:  10px;
+  --lp-radius-pill: 999px;
+
+  /* Fonts */
+  --lp-font-heading: 'Poppins', 'Inter', system-ui, sans-serif;
+  --lp-font-body:    'Inter', system-ui, sans-serif;
+
+  /* Layout */
+  --lp-max-width:  1200px;
+}

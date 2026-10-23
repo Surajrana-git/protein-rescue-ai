@@ -1,0 +1,243 @@
+.section {
+  max-width: var(--lp-max-width, 1200px);
+  margin: 52px auto 0;
+  padding: 0 20px;
+}
+
+.heading {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: #0b1a6b;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 85px; /* Ample headroom for the head protruding out of the card */
+}
+
+/* ── Left Column: Stacked Lavender-Blue Cards ── */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featureCard {
+  background: #d6dcf5;
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  border: 1px solid rgba(22, 54, 183, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.featureCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(22, 54, 183, 0.12);
+}
+
+.featureCard:focus-visible {
+  outline: 3px solid #1636b7;
+  outline-offset: 2px;
+}
+
+.iconWrapper {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.featureIcon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #0b1a6b;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.cardText {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* ── Right Column: Large White Card with Typography & Protruding Person Photo ── */
+.rightCard {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(22, 54, 183, 0.08);
+  position: relative;
+  overflow: visible; /* Allows half the head to pop out at the top */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 340px;
+  padding: 32px 32px 24px 32px;
+}
+
+.overlayText {
+  position: relative;
+  z-index: 5;
+  max-width: 46%;
+}
+
+.smartYourHeading {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 32px;
+  font-weight: 900;
+  color: #0b0f19;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.logoPhraseRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.dnaLogoBadge {
+  background: #ffffff;
+  border: 1.5px solid #111827;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.dnaLogoImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.phraseCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.wasteWithLabel {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #475569;
+  text-transform: uppercase;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.proteinRescueLabel {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 17px;
+  font-weight: 800;
+  color: #0b1a6b;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ── Person Photo: Perfectly cut-out outline, head above card, shoulder right beside AI ── */
+.personPhotoWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: calc(100% + 90px); /* Head extends out above the card */
+  z-index: 2;
+  width: 58%;
+  max-width: 440px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.personImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom right;
+  display: block;
+  border-bottom-right-radius: 16px;
+}
+
+/* Responsive */
+@media (max-width: 910px) {
+  .smartYourHeading {
+    font-size: 32px;
+  }
+  .rightCard {
+    min-height: 310px;
+    padding: 24px 20px 0 20px;
+  }
+  .personPhotoWrapper {
+    height: calc(100% + 55px);
+    width: 62%;
+    right: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 50px;
+  }
+  .featureCard {
+    padding: 18px 20px;
+    gap: 16px;
+  }
+  .iconWrapper {
+    width: 48px;
+    height: 48px;
+  }
+  .featureIcon {
+    width: 44px;
+    height: 44px;
+  }
+  .rightCard {
+    min-height: 280px;
+    padding: 28px 20px 0 20px;
+  }
+  .smartYourHeading {
+    font-size: 30px;
+  }
+  .overlayText {
+    max-width: 52%;
+  }
+  .personPhotoWrapper {
+    height: calc(100% + 40px);
+    width: 58%;
+    max-width: 280px;
+  }
+}

@@ -1,0 +1,361 @@
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+/* ── Top utility bar ── */
+.utilityBar {
+  background: #07134b;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.utilityInner {
+  max-width: var(--lp-max-width, 1200px);
+  margin: 0 auto;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.utilityLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.utilityText {
+  color: #e2e8f0;
+  white-space: nowrap;
+}
+
+.pillNavy {
+  background: #11257c;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 10.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gearIcon {
+  width: 12px;
+  height: 12px;
+  color: #93c5fd;
+}
+
+.pillYellow {
+  background: #ffd84d;
+  color: #111827;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.utilityRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.utilityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11.5px;
+  font-weight: 500;
+  transition: opacity 0.15s ease;
+}
+
+.utilityLink:hover {
+  opacity: 0.85;
+}
+
+.utilityLink:focus-visible {
+  outline: 2px solid #ffd84d;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.mailIcon {
+  width: 14px;
+  height: 14px;
+  color: #93c5fd;
+}
+
+.loginPill {
+  background: #ffd84d;
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.loginPill:hover {
+  background: #f7ca2b;
+}
+
+.loginPill:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.arrowIcon {
+  width: 15px;
+  height: 15px;
+}
+
+/* ── Main nav bar ── */
+.mainNav {
+  background: #1636b7;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(22, 54, 183, 0.2);
+}
+
+.mainNavInner {
+  max-width: var(--lp-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.brand:focus-visible {
+  outline: 2px solid #ffd84d;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.logoBadge {
+  background: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.logoImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.brandTitle {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLink {
+  color: #ffffff;
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 6px 0;
+  position: relative;
+  transition: opacity 0.15s ease;
+}
+
+.navLink:hover {
+  opacity: 0.9;
+}
+
+.navLinkActive {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2.5px;
+  text-decoration-color: #ffd84d;
+}
+
+.navLink:focus-visible {
+  outline: 2px solid #ffd84d;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ── Hamburger button ── */
+.hamburgerBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.hamburgerBtn:focus-visible {
+  outline: 2px solid #ffd84d;
+  outline-offset: 2px;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.barOpenTop {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.barOpenMid {
+  opacity: 0;
+}
+
+.barOpenBot {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ── Mobile menu dropdown ── */
+.mobileMenu {
+  background: #11288c;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 16px 20px 20px;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobileNavLink {
+  color: #ffffff;
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.mobileNavLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileNavLinkActive {
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #ffd84d;
+}
+
+.mobileNavLink:focus-visible {
+  outline: 2px solid #ffd84d;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 910px) {
+  .navLinks {
+    gap: 18px;
+  }
+  .navLink {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .utilityInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 14px;
+  }
+  .utilityLeft {
+    gap: 6px;
+  }
+  .utilityText {
+    white-space: normal;
+    font-size: 10px;
+  }
+  .pillNavy {
+    font-size: 9.5px;
+    padding: 3px 8px;
+  }
+  .pillYellow {
+    font-size: 9px;
+  }
+  .utilityRight {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .mainNavInner {
+    padding: 0 14px;
+    height: 58px;
+  }
+  .brandTitle {
+    font-size: 17px;
+  }
+  .logoBadge {
+    width: 32px;
+    height: 32px;
+  }
+  .logoImg {
+    width: 22px;
+    height: 22px;
+  }
+  .navLinks {
+    display: none;
+  }
+  .hamburgerBtn {
+    display: flex;
+  }
+}
