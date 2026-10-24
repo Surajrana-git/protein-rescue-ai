@@ -1,0 +1,256 @@
+{
+  "costs": {
+    "groundnutCakeBaseInrPerKg": 35.0,
+    "peaIsolateInrPerKg": 450.0,
+    "peaProteinPct": 80.0,
+    "treatmentEnergyWaterInrPerKg": 2.0,
+    "proteinRetentionRatio": 0.96
+  },
+  "kinetics": {
+    "kPhytate": 0.0015,
+    "kTannin": 0.0008,
+    "tempOptimum": 50,
+    "tempSpread": 30
+  },
+  "whatIfScenario": {
+    "tempC": 45,
+    "timeMin": 90,
+    "enzymeDoseUPerG": 12
+  },
+  "offFlavourCategories": [
+    "Bitter",
+    "Beany / grassy",
+    "Astringent",
+    "Earthy / rancid"
+  ],
+  "offFlavourScores": {
+    "Raw by-product": [6.5, 5.0, 7.0, 4.0],
+    "After current treatment": [6.3, 4.9, 6.8, 3.9],
+    "After what-if scenario only": [7.0, 4.5, 4.0, 3.8],
+    "What-if scenario + taste package": [3.0, 2.5, 2.5, 2.5]
+  },
+  "causes": [
+    {
+      "compound": "Bitter peptides",
+      "origin": "Enzyme by-product",
+      "mechanism": "Proteases (and side-activities in crude preparations) cleave proteins releasing small hydrophobic peptides (terminal Leu, Phe, Tyr, Trp).",
+      "taste": "Bitter",
+      "level": "High",
+      "tier": "Needs expert review"
+    },
+    {
+      "compound": "Hexanal, 2-pentylfuran, 1-hexanol",
+      "origin": "Enzyme by-product",
+      "mechanism": "Lipoxygenase acts on residual linoleic acid yielding aldehydes and alcohols responsible for beany, green, or grassy notes.",
+      "taste": "Beany / grassy",
+      "level": "Medium",
+      "tier": "Needs expert review"
+    },
+    {
+      "compound": "Free fatty acids, nonanal",
+      "origin": "Enzyme / oxidation by-product",
+      "mechanism": "Lipase hydrolyzes residual lipids; subsequent autoxidation generates stale, rancid notes exacerbated under humid storage.",
+      "taste": "Rancid / earthy",
+      "level": "Medium",
+      "tier": "Needs expert review"
+    },
+    {
+      "compound": "Tannins (polyphenols)",
+      "origin": "Natural anti-nutrient",
+      "mechanism": "Precipitate salivary proline-rich proteins causing oral astringency and perceived roughness.",
+      "taste": "Astringent",
+      "level": "High",
+      "tier": "Needs expert review"
+    },
+    {
+      "compound": "Saponins",
+      "origin": "Natural anti-nutrient",
+      "mechanism": "Triterpenoid/steroid glycosides causing lingering bitterness, throat-catch, and aqueous foaming.",
+      "taste": "Bitter / soapy",
+      "level": "Low-Med",
+      "tier": "Needs expert review"
+    },
+    {
+      "compound": "Phytate",
+      "origin": "Natural anti-nutrient",
+      "mechanism": "Minimal direct gustatory sensation, but chelates divalent cations (Fe, Zn, Ca) yielding gritty, chalky mouthfeel at high concentrations.",
+      "taste": "Chalky (indirect)",
+      "level": "Low",
+      "tier": "Needs expert review"
+    }
+  ],
+  "correctiveOptions": [
+    {
+      "name": "Phytase",
+      "type": "Enzyme",
+      "fixes": "Phytate degradation, mineral bioavailability",
+      "typicalDose": "0.05-0.2 g / kg",
+      "costInrPerKg": 0.8,
+      "source": "Microbial (non-animal)",
+      "tier": "Placeholder assumption",
+      "inPackage": true
+    },
+    {
+      "name": "Tannase",
+      "type": "Enzyme",
+      "fixes": "Tannin hydrolysis; reduces astringency",
+      "typicalDose": "0.1-0.3 g / kg",
+      "costInrPerKg": 1.2,
+      "source": "Microbial (non-animal)",
+      "tier": "Placeholder assumption",
+      "inPackage": true
+    },
+    {
+      "name": "Laccase / polyphenol oxidase",
+      "type": "Enzyme",
+      "fixes": "Polyphenol modification (may cause darkening)",
+      "typicalDose": "0.05-0.2 g / kg",
+      "costInrPerKg": 1.5,
+      "source": "Microbial / fungal",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    },
+    {
+      "name": "Aminopeptidase / exopeptidase (debittering)",
+      "type": "Enzyme",
+      "fixes": "Bitter peptides: cleaves N-terminal hydrophobic residues",
+      "typicalDose": "0.2-0.5 g / kg",
+      "costInrPerKg": 2.5,
+      "source": "Microbial (non-animal)",
+      "tier": "Placeholder assumption",
+      "inPackage": true
+    },
+    {
+      "name": "Thermal blanching + pH adjustment",
+      "type": "Process",
+      "fixes": "Inactivates native lipoxygenase to arrest beany aldehyde generation",
+      "typicalDose": "80-90°C, 5-10 min",
+      "costInrPerKg": 0.3,
+      "source": "Process thermal control",
+      "tier": "Illustrative model",
+      "inPackage": false
+    },
+    {
+      "name": "Citric acid (pH buffer)",
+      "type": "Chemical",
+      "fixes": "Buffers pH for enzyme optima; modulates perceived bitterness",
+      "typicalDose": "0.2-0.5 %",
+      "costInrPerKg": 0.2,
+      "source": "Fermentation-derived acidulant",
+      "tier": "Placeholder assumption",
+      "inPackage": true
+    },
+    {
+      "name": "Sodium chloride (salt)",
+      "type": "Chemical",
+      "fixes": "Suppresses gustatory bitterness signal transmission",
+      "typicalDose": "0.3-0.8 %",
+      "costInrPerKg": 0.1,
+      "source": "Mineral salt",
+      "tier": "Needs expert review",
+      "inPackage": true
+    },
+    {
+      "name": "Beta-cyclodextrin",
+      "type": "Chemical",
+      "fixes": "Molecular encapsulation of hydrophobic bitter/beany volatiles",
+      "typicalDose": "0.5-1.5 %",
+      "costInrPerKg": 6.0,
+      "source": "Starch-derived cyclic oligosaccharide",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    },
+    {
+      "name": "Ethanol-water extraction",
+      "type": "Process",
+      "fixes": "Extracts saponins and polar volatile off-notes",
+      "typicalDose": "40-60% aqueous ethanol wash",
+      "costInrPerKg": 4.0,
+      "source": "Solvent extraction (requires recovery)",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    },
+    {
+      "name": "Date paste",
+      "type": "Plant-based masker",
+      "fixes": "Natural carbohydrate sweetness attenuates bitter perception",
+      "typicalDose": "3-6 %",
+      "costInrPerKg": 3.0,
+      "source": "Fruit purée",
+      "tier": "Placeholder assumption",
+      "inPackage": true
+    },
+    {
+      "name": "Jaggery",
+      "type": "Plant-based masker",
+      "fixes": "Caramel / molasses volatiles mask earthy notes",
+      "typicalDose": "2-4 %",
+      "costInrPerKg": 1.5,
+      "source": "Unrefined cane sugar",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    },
+    {
+      "name": "Roasted cocoa / carob powder",
+      "type": "Plant-based masker",
+      "fixes": "Pyrazine and roast volatiles mask beany and bitter notes",
+      "typicalDose": "2-5 %",
+      "costInrPerKg": 5.0,
+      "source": "Roasted botanical seed",
+      "tier": "Placeholder assumption",
+      "inPackage": true
+    },
+    {
+      "name": "Coconut milk powder",
+      "type": "Plant-based masker",
+      "fixes": "Lipids and medium-chain triglycerides round off astringency",
+      "typicalDose": "3-8 %",
+      "costInrPerKg": 4.0,
+      "source": "Spray-dried coconut emulsion",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    },
+    {
+      "name": "Yeast extract",
+      "type": "Plant-based masker",
+      "fixes": "Glutamate/5'-ribonucleotide umami profile masks bitterness",
+      "typicalDose": "0.5-1.5 %",
+      "costInrPerKg": 3.5,
+      "source": "Autolyzed baker's/brewer's yeast",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    },
+    {
+      "name": "Roasted cumin-coriander blend",
+      "type": "Plant-based masker",
+      "fixes": "Terpene and spice notes mask off-flavours in savoury applications",
+      "typicalDose": "0.5-1 %",
+      "costInrPerKg": 2.0,
+      "source": "Botanical seed spices",
+      "tier": "Placeholder assumption",
+      "inPackage": false
+    }
+  ],
+  "evidenceTiers": [
+    {
+      "tier": "Validated",
+      "description": "Empirically verified by certified laboratory analytical data on file."
+    },
+    {
+      "tier": "Needs expert review",
+      "description": "Derived from qualitative scientific concepts; pending peer-reviewed validation."
+    },
+    {
+      "tier": "Illustrative model",
+      "description": "Deterministic computational simulation output from unvalidated models."
+    },
+    {
+      "tier": "Placeholder assumption",
+      "description": "Configurable operational and pricing baseline requiring local commercial quotes."
+    },
+    {
+      "tier": "User input (unverified)",
+      "description": "Direct user entry or automated extraction from uncertified report documentation."
+    }
+  ]
+}
