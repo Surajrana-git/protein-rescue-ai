@@ -1,0 +1,154 @@
+.page {
+  background: var(--lp-page-bg, #f5f9fd);
+  min-height: calc(100vh - 64px);
+  padding: 36px 20px 80px;
+  color: #1e293b;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1636b7;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  transition: transform 0.15s ease;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+  transform: translateX(-2px);
+}
+
+.topicCard {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 36px 40px;
+  border: 1px solid rgba(22, 54, 183, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.categoryBadge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #1e40af;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.topicTitle {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  color: #0b1a6b;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.topicSubtitle {
+  font-size: 15px;
+  color: #475569;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #f1f5f9;
+  margin: 28px 0;
+}
+
+.stepsHeading {
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: #0b1a6b;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stepsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #f8fafc;
+  border: 1px solid #edf2f7;
+  padding: 16px 18px;
+  border-radius: 12px;
+}
+
+.stepNumberBadge {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #1636b7;
+  color: #ffffff;
+  font-family: var(--lp-font-heading, 'Poppins', sans-serif);
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepText {
+  font-size: 14px;
+  color: #334155;
+  line-height: 1.55;
+  padding-top: 2px;
+}
+
+.noticeBox {
+  margin-top: 32px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.noticeIcon {
+  color: #2563eb;
+  flex-shrink: 0;
+}
+
+.noticeText {
+  font-size: 13px;
+  color: #1e40af;
+  margin: 0;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .topicCard {
+    padding: 24px 20px;
+  }
+  .topicTitle {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,95 @@
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+/* Sizes */
+.sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+}
+
+.md {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.lg {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.xl {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+}
+
+/* Colors matching reference */
+.blue {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.blueLight {
+  background: #e0e7ff;
+  color: #1636b7;
+}
+
+.blueOutline {
+  background: #f0f4ff;
+  color: #1636b7;
+  border: 1px solid rgba(22, 54, 183, 0.15);
+}
+
+.green {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.greenLight {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.orange {
+  background: #ea580c;
+  color: #ffffff;
+}
+
+.orangeLight {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.red {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.redLight {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.purple {
+  background: #9333ea;
+  color: #ffffff;
+}
+
+.purpleLight {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+.slateLight {
+  background: #f1f5f9;
+  color: #475569;
+}
